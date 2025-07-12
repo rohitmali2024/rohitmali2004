@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X } from 'lucide-react';
@@ -36,13 +35,14 @@ const Navigation = ({ darkMode, setDarkMode, scrollToSection }: NavigationProps)
       isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-4 w-full">
+          {/* Logo aligned left */}
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             RM
           </div>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+
+          {/* Desktop Navigation aligned right */}
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -53,29 +53,20 @@ const Navigation = ({ darkMode, setDarkMode, scrollToSection }: NavigationProps)
               </button>
             ))}
           </div>
-          
-          <div className="flex items-center space-x-4">
+
+          {/* Mobile Menu Button aligned right */}
+          <div className="md:hidden flex items-center space-x-4">
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setDarkMode(!darkMode)}
               className="text-gray-300 hover:text-white"
-            >
-              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </Button>
-            
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden text-gray-300 hover:text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>
           </div>
         </div>
-        
+
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-gray-900/95 backdrop-blur-sm border-t border-gray-700">

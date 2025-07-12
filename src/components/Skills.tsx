@@ -15,7 +15,7 @@ const Skills = () => {
     {
       title: 'Frontend Development',
       icon: Globe,
-      skills: ['HTML', 'CSS', 'React.js', 'Tailwind CSS'],
+      skills: ['HTML', 'CSS', 'React.js', 'Tailwind CSS', 'ShadCN'],
       color: 'from-green-500 to-teal-500'
     },
     {
@@ -33,7 +33,7 @@ const Skills = () => {
     {
       title: 'DevOps & Cloud',
       icon: Cloud,
-      skills: ['Docker', 'Kubernetes', 'Ansible', 'Jenkins', 'AWS (EC2, S3, IAM, Lambda, DynamoDB, VPC, Route 53)'],
+      skills: ['Docker', 'Ansible', 'Jenkins', 'AWS Cloud Practioner', 'AWS Solution Architect'],
       color: 'from-indigo-500 to-purple-500'
     },
     {
@@ -45,10 +45,10 @@ const Skills = () => {
   ];
 
   const codingPlatforms = [
-    { name: 'GeeksforGeeks', username: 'rohiitttt_19', problems: '100+' },
-    { name: 'LeetCode', username: 'rohitmali28', problems: '80+' },
-    { name: 'CodeChef', username: 'rohiitttt_19', problems: '70+' },
-    { name: 'HackerRank', username: 'rohit_mali', problems: '50+' }
+    { name: 'GeeksforGeeks', username: 'rohiitttt_19', problems: '90+' },
+    { name: 'LeetCode', username: 'rohitmali28', problems: '380+' },
+    { name: 'CodeChef', username: 'rohiitttt_19', problems: '400+' },
+    { name: 'HackerRank', username: 'ritikmali1249', problems: '100+' }
   ];
 
   return (
@@ -112,7 +112,7 @@ const Skills = () => {
             <div className="text-center mt-8">
               <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-6 border border-green-500/30 inline-block">
                 <h3 className="text-xl font-bold text-white mb-2">Total Problems Solved</h3>
-                <p className="text-4xl font-bold text-green-400">300+</p>
+                <p className="text-4xl font-bold text-green-400">500+</p>
               </div>
             </div>
           </CardContent>
